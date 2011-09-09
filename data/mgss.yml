@@ -1,0 +1,82 @@
+# 運用状態通知テンプレート
+---
+# 運用状態がキー(コネクション接続指示)
+!str 1000:
+  # メッセージ共通部
+  MESSAGE_COMMON:
+    retCode: "0000"
+  # テンプレート共通部
+  COMMON:
+    STATUS: "0000"
+  # データ部
+  DATAAREA:
+    # 業務テンプレート
+    templateID: "WS01"
+    # フラグ（運用状態）
+    runningStateFlg: " "
+    # フラグ（残サービス時間）
+    restServiceTimeFlg: " "
+    # 残サービス時間
+    restServiceTime: "0000"
+
+# 運用状態がキー(運用開始)
+!str '0000':
+  # メッセージ共通部
+  MESSAGE_COMMON:
+    retCode: "0000"
+  # テンプレート共通部
+  COMMON:
+    STATUS: "0000"
+  # データ部
+  DATAAREA:
+    # 業務テンプレート
+    templateID: "WS01"
+    # フラグ（運用状態）
+    runningStateFlg: " "
+    # フラグ（残サービス時間）
+    restServiceTimeFlg: " "
+    # 残サービス時間
+    restServiceTime: "0000"
+
+# 運用状態がキー(運用停止)
+"0900":
+  # メッセージ共通部
+  MESSAGE_COMMON:
+    retCode: "0000"
+  # テンプレート共通部
+  COMMON:
+    STATUS: "0000"
+  # データ部
+  DATAAREA:
+    # 業務テンプレート
+    templateID: "WS01"
+    # フラグ（運用状態）
+    runningStateFlg: " "
+    # フラグ（残サービス時間）
+    restServiceTimeFlg: " "
+    # 残サービス時間
+    restServiceTime: "0000"
+
+# 運用状態がキー(コネクション切断指示)
+"1900":
+  # メッセージ共通部
+  MESSAGE_COMMON:
+    retCode: "0000"
+  # テンプレート共通部
+  COMMON:
+    STATUS: "0000"
+  # データ部
+  DATAAREA:
+    # 業務テンプレート
+    templateID: "WS01"
+    # フラグ（運用状態）
+    runningStateFlg: " "
+    # フラグ（残サービス時間）
+    restServiceTimeFlg: " "
+    # 残サービス時間
+    restServiceTime: "0000"
+
+#Sleepフラグ(0:通常応答、1:全ての通信に応答しない)
+SLEEP_FLG: "1"
+#Sleep秒(現時点で未使用)
+SLEEP_CNT: 1200
